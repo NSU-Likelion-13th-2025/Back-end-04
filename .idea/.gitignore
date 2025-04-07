@@ -6,3 +6,9 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# 파일 제외 (파일명.확장자)
+.idea/vcs.xml
+
+# 특정 폴더안의 파일 전부 제외
+out/production/Back-End-04
