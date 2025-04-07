@@ -1,20 +1,87 @@
-# 디폴트 무시된 파일
-/shelf/
-/workspace.xml
-# 에디터 기반 HTTP 클라이언트 요청
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+# -------------------------------
+# 기본 무시 파일들
+# -------------------------------
 
-# 파일 제외 (파일명.확장자)
+# macOS 시스템 파일
+.DS_Store
+
+# 에디터 설정
+.idea/
 .idea/vcs.xml
+.vscode/
+*.sublime-workspace
+*.sublime-project
 
-# 특정 폴더안의 파일 전부 제외
-out/production/Back-End-04
+# 로그 및 임시 파일
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.pid
 
-# 해당 확장자 파일 전체 제외
+# 환경설정 및 민감정보
+.env
+*.key
+*.pem
+*.crt
+
+# 빌드 결과물
+/dist/
+/build/
+/out/
+/bin/
+/target/
+/*.class
+*.o
+*.exe
+
+# Node.js 관련
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Python 관련
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Java 관련
+*.class
+*.jar
+*.war
+*.ear
+
+# XML, JSON 등 확장자 기반 무시
 *.xml
 *.iml
 *.json
 *.name
+
+# 캐시 파일
+.cache/
+*.cache
+
+# OS 관련
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -------------------------------
+# 기존 포함된 무시 파일들
+# -------------------------------
+
+# 디폴트 무시된 파일
+/shelf/
+/workspace.xml
+
+# 에디터 기반 HTTP 클라이언트 요청
+/httpRequests/
+
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# 특정 폴더안의 파일 전부 제외
+out/production/Back-End-04
