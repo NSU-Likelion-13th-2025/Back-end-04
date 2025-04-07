@@ -17,3 +17,4 @@ out/production/Back-End-04
 *.xml
 *.iml
 *.json
+*.name
