@@ -1,4 +1,4 @@
-public class session1 {
+public class TestJava {
     public static void main(String[] args) {
         int[] score = new int[] {85, 92, 78, 65, 55, 90, 73, 88, 47, 100};
         char[] grade = new char[score.length];
