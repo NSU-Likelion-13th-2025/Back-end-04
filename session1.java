@@ -47,5 +47,9 @@ public class Main {
         System.out.println("전체 성적 평균: "+ sum / score.length + "." + sum % score.length);
         System.out.println("최고 점수: "+ best);
         System.out.println("최저 점수: "+ worst);
+
+
+
+
     }
 }
