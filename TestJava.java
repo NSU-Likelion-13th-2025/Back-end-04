@@ -5,7 +5,9 @@ public class TestJava {
         int max = score[0], min = score[0]; // max는 최댓값, min은 최솟값
         double avg = 0, total = 0; // avg는 평균값
 
-        for (int i = 0; i < score.length; i++) {
+
+        System.out.println("학생 성적 결과");
+      ;  for (int i = 0; i < score.length; i++) {
 
             if (score[i] >= 90) {
                 grade[i] = 'A';
