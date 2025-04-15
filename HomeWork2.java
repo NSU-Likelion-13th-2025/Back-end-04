@@ -27,7 +27,7 @@ public class HomeWork2 {
         Student s1 = new Student();
         s1.introduce();
 
-        Student s2 = new Student("안다현",22,23101304);
+        Student s2 = new Student("이준섭",25,21101848);
         s2.introduce();
     }
 
