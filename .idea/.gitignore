@@ -7,6 +7,7 @@
 
 # 에디터 설정
 .idea/
+*.iml
 .idea/vcs.xml
 .vscode/
 *.sublime-workspace
@@ -84,4 +85,5 @@ Desktop.ini
 /dataSources.local.xml
 
 # 특정 폴더안의 파일 전부 제외
-out/production/Back-End-04
+out/production
+out/
