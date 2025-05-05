@@ -2,47 +2,65 @@ package HOMEWORK;
 
 import java.util.Scanner;
 
+class Student {
+    protected String name;
+    protected int[]scores;
+
+    public Student(String name, int[] scores) {
+        this.name = name;
+        this.scores = scores;
+    }
+    public int sumScore() {
+        int sum = 0;
+        for (int i = 0; i < scores.length; i++) {
+            sum += scores[i];
+        }
+        return sum;
+    }
+    public void printInfo(){
+        int sum = sumScore();
+        String grade;
+
+        if (sum >= 270) {
+            grade = "A";
+        }
+        else if(sum >= 250){
+            grade = "B";
+        }
+        else if(sum >= 230){
+            grade = "C";
+        }
+        else if(sum >= 210){
+            grade = "D";
+        }
+        else {
+            grade = "F";
+        }
+        System.out.println("이름: "+name);
+        System.out.println("합계: "+sum);
+        System.out.println("등급: "+grade);
+    }
+
+}
+
+class GraduateStudent extends Student {
+    private String subject;
+
+    public GraduateStudent(String name, int[] scores,String subject) {
+        super(name, scores);
+        this.subject = subject;
+    }
+    public void printInfo(){
+        super.printInfo();
+        System.out.println("학과: "+subject);
+    }
+}
 public class Main {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        StudentManager manager = new StudentManager(100);
-
-        while(true){
-            ShowMenu();
-            System.out.print("메뉴를 입력해주세요: ");
-            int put = s.nextInt();
-
-            switch(put){
-                case 1:
-                    System.out.print("이름: ");
-                    String name = s.next();
-                    System.out.print("나이: ");
-                    int age = s.nextInt();
-                    System.out.print("성적: ");
-                    float score = s.nextFloat();
-                    manager.addStudent(name, age, score);
-                    break;
-                case 2:
-                    manager.printAllStudents();
-                    break;
-                case 3:
-                    manager.printAverageScore();
-                    break;
-                case 4:
-                    manager.printTopStudents();
-                    break;
-                default:
-                    System.out.println("잘못된 숫자입니다.");
-            }
-
-        }
-    }
-    static void ShowMenu(){
-        System.out.println("1. 학생정보추가");
-        System.out.println("2. 전체 학생 정보 ");
-        System.out.println("3. 평균성적");
-        System.out.println("4. 최고 성적 학생");
-
+        GraduateStudent graduateStudent = new GraduateStudent(
+                "이준섭", new int[]{97,92,88},"컴퓨터소프트웨어학과"
+        );
+        graduateStudent.printInfo();
 
     }
 }
