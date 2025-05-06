@@ -19,18 +19,19 @@ class Student {
     }
     public void printInfo(){
         int sum = sumScore();
+        double avg= (double)sumScore()/scores.length;
         String grade;
 
-        if (sum >= 270) {
+        if (avg >= 90) {
             grade = "A";
         }
-        else if(sum >= 250){
+        else if(avg >= 80){
             grade = "B";
         }
-        else if(sum >= 230){
+        else if(avg >= 70){
             grade = "C";
         }
-        else if(sum >= 210){
+        else if(avg >= 60){
             grade = "D";
         }
         else {
@@ -38,6 +39,7 @@ class Student {
         }
         System.out.println("이름: "+name);
         System.out.println("합계: "+sum);
+        System.out.println("평균: "+avg);
         System.out.println("등급: "+grade);
     }
 
